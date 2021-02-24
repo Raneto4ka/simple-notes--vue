@@ -35,8 +35,6 @@ export default {
                     
                     for(let key in this.notes[i]) {
                         if (key === 'contenteditable' & this.notes[i][key] === true) {
-                                //console.log(this.notes[i]); 
-                                //console.log(this.$refs.p[i].innerText);
                                 this.updateTitle(this.$refs.p[i].innerText, i);
                         }
                     }
@@ -60,8 +58,6 @@ export default {
             this.$emit('remove', index)
         },
         updateTitle(text, index) {
-            //console.log(text);
-            //console.log(index);
             this.$emit('updateTitle', {
                 title: text,
                 index: index
